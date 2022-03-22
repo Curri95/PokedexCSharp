@@ -45,13 +45,16 @@
             this.cajaNombre = new System.Windows.Forms.Label();
             this.cajaDescripcion = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cajaNumero02 = new System.Windows.Forms.Label();
             this.cajaNombre02 = new System.Windows.Forms.Label();
             this.cajaMovimiento04 = new System.Windows.Forms.Label();
             this.cajaMovimiento03 = new System.Windows.Forms.Label();
             this.cajaMovimiento02 = new System.Windows.Forms.Label();
             this.cajaMovimiento01 = new System.Windows.Forms.Label();
-            this.cajaNumero02 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.cajaNombre03 = new System.Windows.Forms.Label();
+            this.cajaNumero03 = new System.Windows.Forms.Label();
+            this.habitatTexto = new System.Windows.Forms.Label();
             this.cajaHabitat = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -255,11 +258,25 @@
             this.tabPage2.Text = "Movimientos";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // cajaNumero02
+            // 
+            this.cajaNumero02.BackColor = System.Drawing.Color.Transparent;          
+            this.cajaNumero02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cajaNumero02.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.cajaNumero02.Location = new System.Drawing.Point(70, 11);
+            this.cajaNumero02.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cajaNumero02.Name = "cajaNumero02";
+            this.cajaNumero02.Size = new System.Drawing.Size(56, 36);
+            this.cajaNumero02.TabIndex = 28;
+            this.cajaNumero02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // cajaNombre02
             // 
+            this.cajaNombre02.BackColor = System.Drawing.Color.Transparent;
             this.cajaNombre02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cajaNombre02.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.cajaNombre02.Location = new System.Drawing.Point(133, 9);
+            this.cajaNombre02.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cajaNombre02.Name = "cajaNombre02";
             this.cajaNombre02.Size = new System.Drawing.Size(146, 43);
             this.cajaNombre02.TabIndex = 27;
@@ -301,18 +318,13 @@
             this.cajaMovimiento01.TabIndex = 0;
             this.cajaMovimiento01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cajaNumero02
-            // 
-            this.cajaNumero02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajaNumero02.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.cajaNumero02.Location = new System.Drawing.Point(70, 11);
-            this.cajaNumero02.Name = "cajaNumero02";
-            this.cajaNumero02.Size = new System.Drawing.Size(56, 33);
-            this.cajaNumero02.TabIndex = 28;
-            this.cajaNumero02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tabPage3
             // 
+            this.tabPage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage3.BackgroundImage")));
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage3.Controls.Add(this.cajaNombre03);
+            this.tabPage3.Controls.Add(this.cajaNumero03);
+            this.tabPage3.Controls.Add(this.habitatTexto);
             this.tabPage3.Controls.Add(this.cajaHabitat);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -322,11 +334,45 @@
             this.tabPage3.Text = "Habitat";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // cajaNombre03
+            // 
+            this.cajaNombre03.BackColor = System.Drawing.Color.Transparent;
+            this.cajaNombre03.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cajaNombre03.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.cajaNombre03.Location = new System.Drawing.Point(133, 9);
+            this.cajaNombre03.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cajaNombre03.Name = "cajaNombre03";
+            this.cajaNombre03.Size = new System.Drawing.Size(146, 43);
+            this.cajaNombre03.TabIndex = 3;
+            this.cajaNombre03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cajaNumero03
+            // 
+            this.cajaNumero03.BackColor = System.Drawing.Color.Transparent;
+            this.cajaNumero03.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cajaNumero03.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.cajaNumero03.Location = new System.Drawing.Point(70, 11);
+            this.cajaNumero03.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cajaNumero03.Name = "cajaNumero03";
+            this.cajaNumero03.Size = new System.Drawing.Size(56, 36);
+            this.cajaNumero03.TabIndex = 2;
+            this.cajaNumero03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // habitatTexto
+            // 
+            this.habitatTexto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.habitatTexto.Location = new System.Drawing.Point(22, 73);
+            this.habitatTexto.Name = "habitatTexto";
+            this.habitatTexto.Size = new System.Drawing.Size(339, 37);
+            this.habitatTexto.TabIndex = 1;
+            this.habitatTexto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // cajaHabitat
             // 
-            this.cajaHabitat.Location = new System.Drawing.Point(115, 160);
+            this.cajaHabitat.Location = new System.Drawing.Point(103, 130);
             this.cajaHabitat.Name = "cajaHabitat";
             this.cajaHabitat.Size = new System.Drawing.Size(169, 110);
+            this.cajaHabitat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cajaHabitat.TabIndex = 0;
             this.cajaHabitat.TabStop = false;
             // 
@@ -382,5 +428,8 @@
         private System.Windows.Forms.Label cajaNumero02;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.PictureBox cajaHabitat;
+        private System.Windows.Forms.Label habitatTexto;
+        private System.Windows.Forms.Label cajaNombre03;
+        private System.Windows.Forms.Label cajaNumero03;
     }
 }

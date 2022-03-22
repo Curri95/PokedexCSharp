@@ -53,6 +53,7 @@ namespace Pokedex2022_CSharp
             v.pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
             v.cambiaNombrePokemon(misPokemons.Rows[0]["nombre"].ToString());
             v.cambiaNombrePokemon02(misPokemons.Rows[0]["nombre"].ToString());
+            v.cambiaNombrePokemon03(misPokemons.Rows[0]["nombre"].ToString());
             v.cambiaAlturaPokemon(misPokemons.Rows[0]["altura"].ToString());
             v.cambiaPesoPokemon(misPokemons.Rows[0]["peso"].ToString());
             v.cambiaEspeciePokemon(misPokemons.Rows[0]["especie"].ToString());
@@ -61,6 +62,7 @@ namespace Pokedex2022_CSharp
             v.cambiaDescripcionPokemon(misPokemons.Rows[0]["descripcion"].ToString() );
             v.cambiaNumeroPokemon(misPokemons.Rows[0]["id"].ToString());
             v.cambiaNumeroPokemon02(misPokemons.Rows[0]["id"].ToString());
+            v.cambiaNumeroPokemon03(misPokemons.Rows[0]["id"].ToString());
             v.cambiaHabilidadPokemon(misPokemons.Rows[0]["habilidad"].ToString());
             v.cambiaMovimiento01(misPokemons.Rows[0]["movimiento1"].ToString());
             v.cambiaMovimiento02(misPokemons.Rows[0]["movimiento2"].ToString());

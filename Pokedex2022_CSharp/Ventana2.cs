@@ -28,6 +28,10 @@ namespace Pokedex2022_CSharp
         {
             cajaNombre02.Text = nombre;
         }
+        public void cambiaNombrePokemon03(String nombre)
+        {
+            cajaNombre03.Text = nombre;
+        }
         public void cambiaAlturaPokemon(String altura)
         {
             cajaAltura.Text = altura + " M" ;
@@ -202,6 +206,10 @@ namespace Pokedex2022_CSharp
         {
             cajaNumero02.Text = numero;
         }
+        public void cambiaNumeroPokemon03(String numero)
+        {
+            cajaNumero03.Text = numero;
+        }
         public void cambiaHabilidadPokemon(String habilidad)
         {
             cajaHabilidad.Text = habilidad;
@@ -226,38 +234,47 @@ namespace Pokedex2022_CSharp
         {
             if (habitat.Equals("Agua Dulce"))
             {
+                habitatTexto.Text = "Este Pokemon vive en el Agua Dulce";
                 cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/aguadulce.png");
             }
             if (habitat.Equals("Agua Salada"))
             {
+                habitatTexto.Text = "Este Pokemon vive en el Agua Salada";
                 cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/aguasalada.png");
             }
             if (habitat.Equals("Bosque"))
             {
+                habitatTexto.Text = "Este Pokemon vive en los Bosques";
                 cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/bosque.png");
             }
             if(habitat.Equals("Campo"))
             {
+                habitatTexto.Text = "Este Pokemon vive en los Campos";
                 cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/campo.png");
             }
-            if (habitat.Equals("Bosque"))
+            if (habitat.Equals("Caverna"))
             {
-                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/bosque.png");
+                habitatTexto.Text = "Este Pokemon vive en las Cavernas";
+                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/caverna.png");
             }
             if (habitat.Equals("Ciudad"))
             {
+                habitatTexto.Text = "Este Pokemon vive en  las Ciudades";
                 cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/ciudad.png");
             }
             if (habitat.Equals("Montaña"))
             {
+                habitatTexto.Text = "Este Pokemon vive en las Montañas";
                 cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/montania.png");
             }
             if (habitat.Equals("Pradera"))
             {
+                habitatTexto.Text = "Este Pokemon vive en las Praderas";
                 cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/pradera.png");
             }
             if (habitat.Equals("RARO"))
             {
+                habitatTexto.Text = "Este Pokemon es Legendario, sólo se encuentra en ciertos lugares";
                 cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/raro.png");
             }
         }
