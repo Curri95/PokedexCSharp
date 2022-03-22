@@ -19,7 +19,7 @@ namespace Pokedex2022_CSharp
         public VentanaPrincipal()
         {
             InitializeComponent();
-            pictureBox1.Image = Image.FromFile("C:/Users/xp/Downloads/logo.png");
+            pictureBox1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/logo.png");
 
         }
 
@@ -52,6 +52,7 @@ namespace Pokedex2022_CSharp
             Ventana2 v = new Ventana2();
             v.pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
             v.cambiaNombrePokemon(misPokemons.Rows[0]["nombre"].ToString());
+            v.cambiaNombrePokemon02(misPokemons.Rows[0]["nombre"].ToString());
             v.cambiaAlturaPokemon(misPokemons.Rows[0]["altura"].ToString());
             v.cambiaPesoPokemon(misPokemons.Rows[0]["peso"].ToString());
             v.cambiaEspeciePokemon(misPokemons.Rows[0]["especie"].ToString());
@@ -59,9 +60,13 @@ namespace Pokedex2022_CSharp
             v.cambiaTipo02Pokemon(misPokemons.Rows[0]["tipo2"].ToString());
             v.cambiaDescripcionPokemon(misPokemons.Rows[0]["descripcion"].ToString() );
             v.cambiaNumeroPokemon(misPokemons.Rows[0]["id"].ToString());
+            v.cambiaNumeroPokemon02(misPokemons.Rows[0]["id"].ToString());
             v.cambiaHabilidadPokemon(misPokemons.Rows[0]["habilidad"].ToString());
-            
-
+            v.cambiaMovimiento01(misPokemons.Rows[0]["movimiento1"].ToString());
+            v.cambiaMovimiento02(misPokemons.Rows[0]["movimiento2"].ToString());
+            v.cambiaMovimiento03(misPokemons.Rows[0]["movimiento3"].ToString());
+            v.cambiaMovimiento04(misPokemons.Rows[0]["movimiento4"].ToString());
+            v.cambiaHabitat(misPokemons.Rows[0]["habitat"].ToString());
 
             v.Show();
         }

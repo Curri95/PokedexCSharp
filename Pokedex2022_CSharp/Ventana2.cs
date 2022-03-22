@@ -24,192 +24,249 @@ namespace Pokedex2022_CSharp
         {     
             cajaNombre.Text = nombre; 
         }
+        public void cambiaNombrePokemon02(String nombre)
+        {
+            cajaNombre02.Text = nombre;
+        }
         public void cambiaAlturaPokemon(String altura)
         {
             cajaAltura.Text = altura + " M" ;
         }
-
         public void cambiaPesoPokemon(String peso)
         {
             cajaPeso.Text = peso + " KG";
         }
-
-
         public void cambiaEspeciePokemon(String especie)
         {
             cajaEspecie.Text = especie;
         }
-
         public void cambiaTipo01Pokemon(String tipo1)
         {
             cajaTipo01.Text = tipo1;
 
             if(tipo1.Equals("Planta"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/planta.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/planta.png");
             }
             if (tipo1.Equals("Veneno"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/veneno.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/veneno.png");
             }
             if (tipo1.Equals("Fuego"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/fuego.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/fuego.png");
             }
             if (tipo1.Equals("Agua"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/agua.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/agua.png");
             }
             if (tipo1.Equals("Bicho"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/bicho.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/bicho.png");
             }
             if (tipo1.Equals("Volador"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/volador.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/volador.png");
             }
             if (tipo1.Equals("Electrico"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/electrico.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/electrico.png");
             }
             if (tipo1.Equals("Tierra"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/tierra.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/tierra.png");
             }
             if (tipo1.Equals("Normal"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/normal.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/normal.png");
             }
             if (tipo1.Equals("Dragon"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/dragon.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/dragon.png");
             }
             if (tipo1.Equals("Lucha"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/lucha.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/lucha.png");
             }
             if (tipo1.Equals("Psiquico"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/psiquico.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/psiquico.png");
             }
             if (tipo1.Equals("Roca"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/roca.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/roca.png");
             }
             if (tipo1.Equals("Acero"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/acero.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/acero.png");
             }
             if (tipo1.Equals("Hielo"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/hielo.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/hielo.png");
             }
             if (tipo1.Equals("Fantasma"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/fantasma.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/fantasma.png");
             }
             if (tipo1.Equals("Siniestro"))
             {
-                imagentipo1.Image = Image.FromFile("C:/Users/xp/Downloads/siniestro.png");
+                imagentipo1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/siniestro.png");
             }
             else
             {
                 
             }
         }
-
         public void cambiaTipo02Pokemon(String tipo2)
         {
             cajaTipo02.Text = tipo2;
 
             if (tipo2.Equals("Planta"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/planta.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/planta.png");
             }
             if (tipo2.Equals("Veneno"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/veneno.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/veneno.png");
             }
             if (tipo2.Equals("Fuego"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/fuego.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/fuego.png");
             }
             if (tipo2.Equals("Agua"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/agua.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/agua.png");
             }
             if (tipo2.Equals("Bicho"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/bicho.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/bicho.png");
             }
             if (tipo2.Equals("Volador"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/volador.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/volador.png");
             }
             if (tipo2.Equals("Electrico"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/electrico.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/electrico.png");
             }
             if (tipo2.Equals("Tierra"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/tierra.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/tierra.png");
             }
             if (tipo2.Equals("Normal"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/normal.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/normal.png");
             }
             if (tipo2.Equals("Dragon"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/dragon.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/dragon.png");
             }
             if (tipo2.Equals("Lucha"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/lucha.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/lucha.png");
             }
             if (tipo2.Equals("Psiquico"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/psiquico.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/psiquico.png");
             }
             if (tipo2.Equals("Roca"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/roca.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/roca.png");
             }
             if (tipo2.Equals("Acero"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/acero.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/acero.png");
             }
             if (tipo2.Equals("Hielo"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/hielo.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/hielo.png");
             }
             if (tipo2.Equals("Fantasma"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/fantasma.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/fantasma.png");
             }
             if (tipo2.Equals("Siniestro"))
             {
-                imagentipo2.Image = Image.FromFile("C:/Users/xp/Downloads/siniestro.png");
+                imagentipo2.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/siniestro.png");
             }
             else
             {
 
             }
         }
-
         public void cambiaNumeroPokemon(String numero)
         {
             cajaNumero.Text = numero;
         }
-
+        public void cambiaNumeroPokemon02(String numero)
+        {
+            cajaNumero02.Text = numero;
+        }
         public void cambiaHabilidadPokemon(String habilidad)
         {
             cajaHabilidad.Text = habilidad;
         }
-
-
-    public Ventana2()
+        public void cambiaMovimiento01(String movimiento01)
         {
-            InitializeComponent();        
+            cajaMovimiento01.Text = movimiento01;
+        }
+        public void cambiaMovimiento02(String movimiento02)
+        {
+            cajaMovimiento02.Text = movimiento02;
+        }
+        public void cambiaMovimiento03(String movimiento03)
+        {
+            cajaMovimiento03.Text = movimiento03;
+        }
+        public void cambiaMovimiento04(String movimiento04)
+        {
+            cajaMovimiento04.Text = movimiento04;
+        }
+        public void cambiaHabitat(String habitat)
+        {
+            if (habitat.Equals("Agua Dulce"))
+            {
+                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/aguadulce.png");
+            }
+            if (habitat.Equals("Agua Salada"))
+            {
+                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/aguasalada.png");
+            }
+            if (habitat.Equals("Bosque"))
+            {
+                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/bosque.png");
+            }
+            if(habitat.Equals("Campo"))
+            {
+                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/campo.png");
+            }
+            if (habitat.Equals("Bosque"))
+            {
+                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/bosque.png");
+            }
+            if (habitat.Equals("Ciudad"))
+            {
+                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/ciudad.png");
+            }
+            if (habitat.Equals("Montaña"))
+            {
+                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/montania.png");
+            }
+            if (habitat.Equals("Pradera"))
+            {
+                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/pradera.png");
+            }
+            if (habitat.Equals("RARO"))
+            {
+                cajaHabitat.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/raro.png");
+            }
+        }
+
+
+        public Ventana2()
+        {
+            InitializeComponent();
+            
         }
 
         private void botonAtras_Click(object sender, EventArgs e)
@@ -217,21 +274,6 @@ namespace Pokedex2022_CSharp
             this.Close();
         }
 
-        private void botonMasDatos_Click(object sender, EventArgs e)
-        {
-
-            Ventana3 v3 = new Ventana3(); 
-            v3.cambiaMovimiento01(misPokemons.Rows[0]["movimiento1"].ToString());
-            v3.cambiaMovimiento02(misPokemons.Rows[0]["movimiento2"].ToString());
-            v3.cambiaMovimiento03(misPokemons.Rows[0]["movimiento3"].ToString());
-            v3.cambiaMovimiento04(misPokemons.Rows[0]["movimiento4"].ToString());
-            v3.cambiaHabitatPokemon(misPokemons.Rows[0]["habitat"].ToString());
-            
-        }
-
-        private void cajaTipo01_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
