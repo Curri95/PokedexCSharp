@@ -12,8 +12,7 @@ namespace Pokedex2022_CSharp
 {
     public partial class Ventana2 : Form
     {
-        Conexion miConexion = new Conexion();
-        DataTable misPokemons = new DataTable();
+        
         
         public void cambiaDescripcionPokemon(String descripcion) 
         {
@@ -32,10 +31,7 @@ namespace Pokedex2022_CSharp
         {
             cajaNombre03.Text = nombre;
         }
-        public void cambiaNombrePokemon04(String nombre)
-        {
-            cajaNombre04.Text = nombre;
-        }
+       
         public void cambiaAlturaPokemon(String altura)
         {
             cajaAltura.Text = altura + " M" ;
@@ -214,10 +210,7 @@ namespace Pokedex2022_CSharp
         {
             cajaNumero03.Text = numero;
         }
-        public void cambiaNumeroPokemon04(String numero)
-        {
-            cajaNumero04.Text = numero;
-        }
+       
         public void cambiaHabilidadPokemon(String habilidad)
         {
             cajaHabilidad.Text = habilidad;
@@ -299,6 +292,10 @@ namespace Pokedex2022_CSharp
             this.Close();
         }
 
-        
+        private void imagenPre_Click(object sender, EventArgs e)
+        {
+
+        }
+ 
     }
 }

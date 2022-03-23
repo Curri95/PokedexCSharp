@@ -34,12 +34,13 @@ namespace Pokedex2022_CSharp
             }
         }
 
-        public DataTable getEvolucion01()
+        public DataTable getPokemonPreEV(int id)
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM pokemon WHERE preEvolucion IS NULL;", conexion);
+
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM pokemon WHERE id = (SELECT preEvolucion FROM pokemon WHERE id='" + id + "')", conexion); 
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 DataTable pokemons = new DataTable();
                 pokemons.Load(resultado);
@@ -51,31 +52,13 @@ namespace Pokedex2022_CSharp
                 throw e;
             }
         }
-
-        public DataTable getEvolucion02()
+        public DataTable getPokemonPosEV(int id)
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM pokemon WHERE posEvolucion IS NULL;", conexion);
-                MySqlDataReader resultado = consulta.ExecuteReader();
-                DataTable pokemons = new DataTable();
-                pokemons.Load(resultado);
-                conexion.Close();
-                return pokemons;
-            }
-            catch (MySqlException e)
-            {
-                throw e;
-            }
-        }
 
-        public DataTable getEvolucion03()
-        {
-            try
-            {
-                conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT imagen FROM pokemon WHERE preEvolucion IS NOT NULL AND posEvolucion IS NOT NULL;'", conexion);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM pokemon WHERE id = (SELECT posEvolucion FROM pokemon WHERE id='" + id + "')", conexion); 
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 DataTable pokemons = new DataTable();
                 pokemons.Load(resultado);
