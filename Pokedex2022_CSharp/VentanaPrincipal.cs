@@ -16,6 +16,9 @@ namespace Pokedex2022_CSharp
         Conexion miConexion = new Conexion();
         DataTable misPokemons = new DataTable();
         public int idActual = 0; //guarda el id del pokemon que se está viendo
+        
+        
+
         public VentanaPrincipal()
         {
             InitializeComponent();
@@ -23,14 +26,20 @@ namespace Pokedex2022_CSharp
 
         }
 
-        
-    
-
     private void izquierda_Click(object sender, EventArgs e)
         {
             idActual--;
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
+            pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
+        }
+
+    private void derecha_Click(object sender, EventArgs e)
+        {
+            idActual++;
+            misPokemons = miConexion.getPokemonPorId(idActual);
+            nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
+            pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
         }
 
         public Image convierteBlobAImagen(byte[] img) {
@@ -38,13 +47,7 @@ namespace Pokedex2022_CSharp
             return (Image.FromStream(ms));
         }
 
-        private void derecha_Click(object sender, EventArgs e)
-        {
-            idActual++;
-            misPokemons = miConexion.getPokemonPorId(idActual);
-            nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
-            pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
-        }
+       
 
         private void botonInfo_Click(object sender, EventArgs e)
         {
@@ -54,6 +57,7 @@ namespace Pokedex2022_CSharp
             v.cambiaNombrePokemon(misPokemons.Rows[0]["nombre"].ToString());
             v.cambiaNombrePokemon02(misPokemons.Rows[0]["nombre"].ToString());
             v.cambiaNombrePokemon03(misPokemons.Rows[0]["nombre"].ToString());
+            v.cambiaNombrePokemon04(misPokemons.Rows[0]["nombre"].ToString());
             v.cambiaAlturaPokemon(misPokemons.Rows[0]["altura"].ToString());
             v.cambiaPesoPokemon(misPokemons.Rows[0]["peso"].ToString());
             v.cambiaEspeciePokemon(misPokemons.Rows[0]["especie"].ToString());
@@ -63,6 +67,7 @@ namespace Pokedex2022_CSharp
             v.cambiaNumeroPokemon(misPokemons.Rows[0]["id"].ToString());
             v.cambiaNumeroPokemon02(misPokemons.Rows[0]["id"].ToString());
             v.cambiaNumeroPokemon03(misPokemons.Rows[0]["id"].ToString());
+            v.cambiaNumeroPokemon04(misPokemons.Rows[0]["id"].ToString());
             v.cambiaHabilidadPokemon(misPokemons.Rows[0]["habilidad"].ToString());
             v.cambiaMovimiento01(misPokemons.Rows[0]["movimiento1"].ToString());
             v.cambiaMovimiento02(misPokemons.Rows[0]["movimiento2"].ToString());
@@ -73,14 +78,5 @@ namespace Pokedex2022_CSharp
             v.Show();
         }
 
-        private void VentanaPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

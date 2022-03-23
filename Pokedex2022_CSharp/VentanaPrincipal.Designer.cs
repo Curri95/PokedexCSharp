@@ -40,7 +40,7 @@
             // izquierda
             // 
             this.izquierda.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.izquierda.Location = new System.Drawing.Point(385, 315);
+            this.izquierda.Location = new System.Drawing.Point(460, 429);
             this.izquierda.Name = "izquierda";
             this.izquierda.Size = new System.Drawing.Size(32, 38);
             this.izquierda.TabIndex = 0;
@@ -50,18 +50,18 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(52, 124);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(82, 182);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(210, 147);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // derecha
             // 
             this.derecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.derecha.Location = new System.Drawing.Point(423, 321);
+            this.derecha.Location = new System.Drawing.Point(498, 432);
             this.derecha.Name = "derecha";
             this.derecha.Size = new System.Drawing.Size(32, 32);
             this.derecha.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // nombrePokemon
             // 
-            this.nombrePokemon.Location = new System.Drawing.Point(79, 377);
+            this.nombrePokemon.Location = new System.Drawing.Point(99, 511);
             this.nombrePokemon.Name = "nombrePokemon";
             this.nombrePokemon.Size = new System.Drawing.Size(100, 27);
             this.nombrePokemon.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // botonInfo
             // 
-            this.botonInfo.Location = new System.Drawing.Point(374, 138);
+            this.botonInfo.Location = new System.Drawing.Point(461, 207);
             this.botonInfo.Margin = new System.Windows.Forms.Padding(2);
             this.botonInfo.Name = "botonInfo";
             this.botonInfo.Size = new System.Drawing.Size(197, 88);
@@ -93,7 +93,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(727, 595);
             this.Controls.Add(this.botonInfo);
             this.Controls.Add(this.nombrePokemon);
@@ -102,7 +102,6 @@
             this.Controls.Add(this.izquierda);
             this.Name = "VentanaPrincipal";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.VentanaPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

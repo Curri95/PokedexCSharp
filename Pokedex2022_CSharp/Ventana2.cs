@@ -32,6 +32,10 @@ namespace Pokedex2022_CSharp
         {
             cajaNombre03.Text = nombre;
         }
+        public void cambiaNombrePokemon04(String nombre)
+        {
+            cajaNombre04.Text = nombre;
+        }
         public void cambiaAlturaPokemon(String altura)
         {
             cajaAltura.Text = altura + " M" ;
@@ -209,6 +213,10 @@ namespace Pokedex2022_CSharp
         public void cambiaNumeroPokemon03(String numero)
         {
             cajaNumero03.Text = numero;
+        }
+        public void cambiaNumeroPokemon04(String numero)
+        {
+            cajaNumero04.Text = numero;
         }
         public void cambiaHabilidadPokemon(String habilidad)
         {

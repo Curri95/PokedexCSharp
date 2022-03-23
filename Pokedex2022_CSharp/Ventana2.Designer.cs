@@ -56,6 +56,10 @@
             this.cajaNumero03 = new System.Windows.Forms.Label();
             this.habitatTexto = new System.Windows.Forms.Label();
             this.cajaHabitat = new System.Windows.Forms.PictureBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.cajaNombre04 = new System.Windows.Forms.Label();
+            this.cajaNumero04 = new System.Windows.Forms.Label();
+            this.textoEvos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -64,6 +68,7 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cajaHabitat)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // botonAtras
@@ -91,6 +96,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(266, 54);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -260,7 +266,7 @@
             // 
             // cajaNumero02
             // 
-            this.cajaNumero02.BackColor = System.Drawing.Color.Transparent;          
+            this.cajaNumero02.BackColor = System.Drawing.Color.Transparent;
             this.cajaNumero02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cajaNumero02.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.cajaNumero02.Location = new System.Drawing.Point(70, 11);
@@ -376,6 +382,55 @@
             this.cajaHabitat.TabIndex = 0;
             this.cajaHabitat.TabStop = false;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
+            this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage4.Controls.Add(this.textoEvos);
+            this.tabPage4.Controls.Add(this.cajaNombre04);
+            this.tabPage4.Controls.Add(this.cajaNumero04);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(430, 326);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Linea Evolutiva";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // cajaNombre04
+            // 
+            this.cajaNombre04.BackColor = System.Drawing.Color.Transparent;
+            this.cajaNombre04.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cajaNombre04.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.cajaNombre04.Location = new System.Drawing.Point(133, 9);
+            this.cajaNombre04.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cajaNombre04.Name = "cajaNombre04";
+            this.cajaNombre04.Size = new System.Drawing.Size(146, 43);
+            this.cajaNombre04.TabIndex = 1;
+            this.cajaNombre04.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cajaNumero04
+            // 
+            this.cajaNumero04.BackColor = System.Drawing.Color.Transparent;
+            this.cajaNumero04.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cajaNumero04.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.cajaNumero04.Location = new System.Drawing.Point(70, 11);
+            this.cajaNumero04.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cajaNumero04.Name = "cajaNumero04";
+            this.cajaNumero04.Size = new System.Drawing.Size(53, 36);
+            this.cajaNumero04.TabIndex = 0;
+            this.cajaNumero04.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textoEvos
+            // 
+            this.textoEvos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoEvos.Location = new System.Drawing.Point(19, 68);
+            this.textoEvos.Name = "textoEvos";
+            this.textoEvos.Size = new System.Drawing.Size(347, 46);
+            this.textoEvos.TabIndex = 2;
+            this.textoEvos.Text = "LINEA EVOLUTIVA";
+            this.textoEvos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Ventana2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,6 +453,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cajaHabitat)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,5 +487,9 @@
         private System.Windows.Forms.Label habitatTexto;
         private System.Windows.Forms.Label cajaNombre03;
         private System.Windows.Forms.Label cajaNumero03;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label cajaNombre04;
+        private System.Windows.Forms.Label cajaNumero04;
+        private System.Windows.Forms.Label textoEvos;
     }
 }
