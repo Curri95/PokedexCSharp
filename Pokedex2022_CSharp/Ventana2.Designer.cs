@@ -402,7 +402,7 @@
             this.PerformLayout();
 
         }
-
+        //En Principio no hay ningún OnClick Redundante.
         #endregion
         private System.Windows.Forms.Button botonAtras;
         public System.Windows.Forms.PictureBox pictureBox1;
