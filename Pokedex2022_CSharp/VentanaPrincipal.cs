@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Pokedex2022_CSharp
@@ -16,57 +12,53 @@ namespace Pokedex2022_CSharp
         Conexion miConexion = new Conexion();
         DataTable misPokemons = new DataTable();
         DataTable misPokemons02 = new DataTable();
-        public int idActual = 0; //guarda el id del pokemon que se está viendo
-        
-        
-
+        SoundPlayer musicadeFondo = new SoundPlayer("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/sonidos/musicadefondo.wav"); //Declaramos la musica de fondo que sonara durante la aplicación.
+        public int idActual = 0; //Guardamos el ID del pokemon que se está viendo.
+         
         public VentanaPrincipal()
         {
-            InitializeComponent();
-            pictureBox1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/logo.png");
-
+            InitializeComponent();           
+            musicadeFondo.Play(); //Iniciamos la música de fondo.
+            pictureBox1.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/logo.png"); //Colocamos el logo de la Pokedex en la PictureBox donde aparecerán los Pokemon.
         }
 
-    private void izquierda_Click(object sender, EventArgs e)
+    private void izquierda_Click(object sender, EventArgs e) //Método que define que hace el botón izquierdo.
         {
-            idActual--;
-            if(idActual < 152 && idActual > 0) 
+            idActual--; //Como el boton Izquierdo actúa como atrás, restamos uno al ID del Pokemon en el que estemos.
+            if(idActual < 152 && idActual > 0) //En la Base de Datos sólo hay 151 Pokemon, así que ese es el rango en el que puede haber datos.
             { 
                 misPokemons = miConexion.getPokemonPorId(idActual);
                 nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
                 pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
             }
-            imagenPos.Image = null;
+            imagenPos.Image = null;  //Cuando pulsamos el Botón izquierdo, vaciamos las PictureBox de la línea evolutiva.
             imagenPre.Image = null;
         }
 
-        private void derecha_Click(object sender, EventArgs e)
+        private void derecha_Click(object sender, EventArgs e) // ↑↑↑ Ditto ↑↑↑
         {
-            idActual++;
+            idActual++; 
             if (idActual < 152 && idActual > 0) 
             {
                 misPokemons = miConexion.getPokemonPorId(idActual);
                 nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
                 pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
             }
-            imagenPos.Image = null;
+            imagenPos.Image = null; 
             imagenPre.Image = null;
         }
 
-
-        public Image convierteBlobAImagen(byte[] img) {
+        public Image convierteBlobAImagen(byte[] img) //Método para convertir los archivos BIN de la Base de Datos a imágenes que se puedan usar.
+        {
             MemoryStream ms = new System.IO.MemoryStream(img);
             return (Image.FromStream(ms));
         }
 
-       
-
-        private void botonInfo_Click(object sender, EventArgs e)
-        {
-            
+        private void botonInfo_Click(object sender, EventArgs e) //Método que define cómo se carga la Segunda Ventana al abrirla.
+        {           
+            //Llamamos a los métodos de la Segunda Ventana y les pasamos los valores de la Base de Datos del Pokemon elegido, usando su ID como guía.
             Ventana2 v = new Ventana2();
-            v.pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
-            
+            v.pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);            
             v.cambiaNombrePokemon(misPokemons.Rows[0]["nombre"].ToString());
             v.cambiaNombrePokemon02(misPokemons.Rows[0]["nombre"].ToString());
             v.cambiaNombrePokemon03(misPokemons.Rows[0]["nombre"].ToString());       
@@ -85,46 +77,34 @@ namespace Pokedex2022_CSharp
             v.cambiaMovimiento03(misPokemons.Rows[0]["movimiento3"].ToString());
             v.cambiaMovimiento04(misPokemons.Rows[0]["movimiento4"].ToString());
             v.cambiaHabitat(misPokemons.Rows[0]["habitat"].ToString());
-
-            v.Show();
+            v.Show(); //Una vez definidos todos los elementos, enseñamos la Ventana al usuario.
         }
 
-        private void nombrePokemon_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void botonEvoluciones_Click(object sender, EventArgs e)
+        private void botonEvoluciones_Click(object sender, EventArgs e) //Método que define que hace el botón que muestra la Linea Evolutiva.
         {
             if (idActual < 152 && idActual > 0)
             {
                 misPokemons = miConexion.getPokemonPreEV(idActual);
                 misPokemons02 = miConexion.getPokemonPorId(idActual);
-                if (misPokemons02.Rows[0]["preEvolucion"].ToString() != "")
+                if (misPokemons02.Rows[0]["preEvolucion"].ToString() != "") //Comprobamos que la Pre-Evolución no es nula.
                 {  
-                    imagenPre.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]); 
+                    imagenPre.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]); //Mostramos sólo la Imagen de la Pre-Evolución, pero se pueden mostrar todos sus datos.
                 }
-                else
+                else //Si no existe Pre-Evolución para el Pokemon, cargamos una imagen en blanco a la PictureBox.
                 {
-                    imagenPre.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/logo.png");
-                }
-
-                if (idActual < 152 && idActual > 0)
+                    imagenPre.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/transparente.png");
+                }          
+                misPokemons = miConexion.getPokemonPosEV(idActual);
+                misPokemons02 = miConexion.getPokemonPorId(idActual);
+                if (misPokemons02.Rows[0]["posEvolucion"].ToString() != "") //Comprobamos que la Segunda Evolución no es nula.
                 {
-                    misPokemons = miConexion.getPokemonPosEV(idActual);
-                    misPokemons02 = miConexion.getPokemonPorId(idActual);
-                    if (misPokemons02.Rows[0]["posEvolucion"].ToString() != "")
-                    {
-                        imagenPos.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
-                    }
-                    else
-                    {
-                        imagenPos.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/logo.png");
-                    }
+                    imagenPos.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]); //Mostramos sólo la Imagen de la Segunda Evolución, pero se pueden mostrar todos sus datos.
                 }
-
-    }
+                else //Si no existe Segunda Evolución para el Pokemon, cargamos una imagen en blanco a la PictureBox.
+                {
+                    imagenPos.Image = Image.FromFile("C:/Users/curri/Desktop/Pokedex2022-master/Pokedex2022_CSharp/imagenes/transparente.png");
+                }
+            }
         }
     }
-
 }

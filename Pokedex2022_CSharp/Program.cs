@@ -9,7 +9,7 @@ namespace Pokedex2022_CSharp
     static class Program
     {
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Punto de entrada principal para la aplicación, no hace falta tocar nada.
         /// </summary>
         [STAThread]
         static void Main()

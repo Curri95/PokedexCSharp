@@ -8,6 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace Pokedex2022_CSharp
 {
+    //Clase para las conexiones a la Base de Datos con la info de los Pokemon.
     class Conexion
     {
         public MySqlConnection conexion;
@@ -16,7 +17,7 @@ namespace Pokedex2022_CSharp
             conexion = new MySqlConnection("Server = 127.0.0.1; Database = listapokemons; Uid = root; Pwd =; Port = 3306;");
         }
 
-        public DataTable getPokemonPorId(int id) 
+        public DataTable getPokemonPorId(int id) //Con este método encontramos los Pokemon según su número.
         {
             try {
                 conexion.Open();
@@ -34,7 +35,7 @@ namespace Pokedex2022_CSharp
             }
         }
 
-        public DataTable getPokemonPreEV(int id)
+        public DataTable getPokemonPreEV(int id) //Con este método encontramos si el Pokemon tiene Pre-Evolución.
         {
             try
             {
@@ -52,7 +53,7 @@ namespace Pokedex2022_CSharp
                 throw e;
             }
         }
-        public DataTable getPokemonPosEV(int id)
+        public DataTable getPokemonPosEV(int id) //Con este método encontramos si el Pokemon tiene Segunda Evolución.
         {
             try
             {

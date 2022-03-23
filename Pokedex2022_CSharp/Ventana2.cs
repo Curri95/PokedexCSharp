@@ -12,39 +12,42 @@ namespace Pokedex2022_CSharp
 {
     public partial class Ventana2 : Form
     {
-        
-        
-        public void cambiaDescripcionPokemon(String descripcion) 
+            
+        public void cambiaDescripcionPokemon(String descripcion) //Método para mostrar la Descripción del Pokemon.
         {
             cajaDescripcion.Text = descripcion;           
         }
-
-        public void cambiaNombrePokemon(String nombre)
+        public void cambiaNombrePokemon(String nombre) //Método para mostrar el Nombre del Pokemon en la primera pestaña.
         {     
             cajaNombre.Text = nombre; 
         }
-        public void cambiaNombrePokemon02(String nombre)
+
+        public void cambiaNombrePokemon02(String nombre) //Método para mostrar el Nombre del Pokemon en la segunda pestaña.
         {
             cajaNombre02.Text = nombre;
         }
-        public void cambiaNombrePokemon03(String nombre)
+
+        public void cambiaNombrePokemon03(String nombre) //Método para mostrar el Nombre del Pokemon en la tercera pestaña.
         {
             cajaNombre03.Text = nombre;
         }
        
-        public void cambiaAlturaPokemon(String altura)
+        public void cambiaAlturaPokemon(String altura) //Método para mostrar el Peso del Pokemon.
         {
             cajaAltura.Text = altura + " M" ;
         }
-        public void cambiaPesoPokemon(String peso)
+
+        public void cambiaPesoPokemon(String peso) //Método para mostrar la Altura del Pokemon.
         {
             cajaPeso.Text = peso + " KG";
         }
-        public void cambiaEspeciePokemon(String especie)
+
+        public void cambiaEspeciePokemon(String especie) //Método para mostrar la Especie del Pokemon.
         {
             cajaEspecie.Text = especie;
         }
-        public void cambiaTipo01Pokemon(String tipo1)
+
+        public void cambiaTipo01Pokemon(String tipo1) //Método para mostrar la imagen del primer Tipo del Pokemon al lado del Tipo.
         {
             cajaTipo01.Text = tipo1;
 
@@ -120,8 +123,9 @@ namespace Pokedex2022_CSharp
             {
                 
             }
-        }
-        public void cambiaTipo02Pokemon(String tipo2)
+        }  
+
+        public void cambiaTipo02Pokemon(String tipo2) //Método para mostrar la imagen del segundo Tipo del Pokemon al lado del Tipo, si es que tiene.
         {
             cajaTipo02.Text = tipo2;
 
@@ -197,41 +201,49 @@ namespace Pokedex2022_CSharp
             {
 
             }
-        }
-        public void cambiaNumeroPokemon(String numero)
+        }  
+
+        public void cambiaNumeroPokemon(String numero) //Método para mostrar el Número del Pokemon en la primera pestaña.
         {
             cajaNumero.Text = numero;
         }
-        public void cambiaNumeroPokemon02(String numero)
+
+        public void cambiaNumeroPokemon02(String numero) //Método para mostrar el Número del Pokemon en la segunda pestaña.
         {
             cajaNumero02.Text = numero;
         }
-        public void cambiaNumeroPokemon03(String numero)
+
+        public void cambiaNumeroPokemon03(String numero) //Método para mostrar el Número del Pokemon en la tercera pestaña.
         {
             cajaNumero03.Text = numero;
         }
        
-        public void cambiaHabilidadPokemon(String habilidad)
+        public void cambiaHabilidadPokemon(String habilidad) //Método para mostrar la Habilidad del Pokemon.
         {
             cajaHabilidad.Text = habilidad;
         }
-        public void cambiaMovimiento01(String movimiento01)
+
+        public void cambiaMovimiento01(String movimiento01) //Método para mostrar el primer Movimiento del Pokemon.
         {
             cajaMovimiento01.Text = movimiento01;
         }
-        public void cambiaMovimiento02(String movimiento02)
+
+        public void cambiaMovimiento02(String movimiento02) //Método para mostrar el segundo Movimiento del Pokemon.
         {
             cajaMovimiento02.Text = movimiento02;
         }
-        public void cambiaMovimiento03(String movimiento03)
+
+        public void cambiaMovimiento03(String movimiento03) //Método para mostrar el tercer Movimiento del Pokemon.
         {
             cajaMovimiento03.Text = movimiento03;
         }
-        public void cambiaMovimiento04(String movimiento04)
+
+        public void cambiaMovimiento04(String movimiento04) //Método para mostrar el cuarto Movimiento del Pokemon.
         {
             cajaMovimiento04.Text = movimiento04;
         }
-        public void cambiaHabitat(String habitat)
+
+        public void cambiaHabitat(String habitat) //Método para mostrar el Habitat del Pokemon, con la imagen correspondiente a ese Habitat debajo.
         {
             if (habitat.Equals("Agua Dulce"))
             {
@@ -280,22 +292,14 @@ namespace Pokedex2022_CSharp
             }
         }
 
-
         public Ventana2()
         {
-            InitializeComponent();
-            
+            InitializeComponent();         
         }
 
-        private void botonAtras_Click(object sender, EventArgs e)
+        private void botonAtras_Click(object sender, EventArgs e) //Método para cerrar la Ventana.
         {
             this.Close();
         }
-
-        private void imagenPre_Click(object sender, EventArgs e)
-        {
-
-        }
- 
     }
 }
